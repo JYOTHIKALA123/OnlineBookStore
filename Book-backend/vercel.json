@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "builds": [  // Corrected from "bulids" to "builds"
+  "builds": [
     {
-      "src": "./index.js",  // Entry point of your serverless function
-      "use": "@vercel/node"  // Use Node.js for this build
+      "src": "index.js",
+      "use": "@vercel/node"
     }
   ],
-  "routes": [  // Define custom routing behavior
+  "routes": [
     {
-      "src": "/(.*)",  // Matches all routes
-      "dest": "/"  // Sends them to the root (index.js handles it)
+      "src": "/(.*)",
+      "dest": "index.js"
     }
   ]
 }
